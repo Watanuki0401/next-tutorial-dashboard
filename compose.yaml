@@ -2,7 +2,9 @@ name: template
 
 services:
   web:
-    image: node:lts-bullseye-slim
+    build:
+      context: .
+      dockerfile: dockerfile
     environment:
       NODE_ENV: development  
     init: true
